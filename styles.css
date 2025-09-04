@@ -92,7 +92,7 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--accent-color);
+    background-color: #25D366; /* Verde oficial do WhatsApp */
     color: var(--white-bg);
     padding: 0.5rem 1.5rem;
     border-radius: 9999px;
@@ -100,7 +100,17 @@ body {
     text-decoration: none;
     transition-property: background-color;
     transition-duration: 300ms;
-    display: none; /* Escondido por padrão, para mobile */
+    
+    /* Configurações para o ícone e texto */
+    display: inline-flex;
+    align-items: center; /* Alinha o ícone e o texto verticalmente */
+    gap: 0.5rem; /* Adiciona um espaço entre o ícone e o texto */
+}
+
+/* Estilo para o ícone */
+.icon {
+    width: 20px;
+    height: 20px;
 }
 
 .btn-primary:hover {
@@ -109,7 +119,7 @@ body {
 
 @media (min-width: 768px) {
     .btn-primary {
-        display: block;
+        display: inline-flex;
     }
 }
 
@@ -143,10 +153,13 @@ body {
     align-items: center;
     min-height: 100vh;
     overflow: hidden; /* Garante que a onda fique contida na seção */
-    background-color: var(--white-bg); /* O branco original da sua seção */
+    background-image: url('imagem.png'); /* O branco original da sua seção */
     padding-top: 5rem;
     padding-bottom: 5rem;
+    z-index: 1;
+    
 }
+
 
 @media (min-width: 768px) {
     .hero-section {
@@ -213,7 +226,8 @@ body {
 .hero-section .container {
     /* Garante que o conteúdo fique por cima das ondas */
     position: relative;
-    z-index: 1;
+    z-index: 2;
+
 }
 
 .hero-title {
@@ -235,7 +249,7 @@ body {
 
 .hero-subtitle {
     font-size: 1.125rem;
-    color: var(--gray-text);
+    color: black;
     margin-bottom: 2rem;
     max-width: 42rem;
     margin-left: auto;
